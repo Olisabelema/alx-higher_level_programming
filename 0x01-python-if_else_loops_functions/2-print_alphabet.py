@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-output = ""
-for letter in range(97, 123):
-    output += chr(letter)
+output = "".join(chr(letter) for letter in range(97, 123))
 print(output, end="")
