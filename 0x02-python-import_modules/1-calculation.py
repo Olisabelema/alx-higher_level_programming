@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if _name_ == "_main_":
+if __name__ == "__main__":
     """Prints the math result of 10 and 5."""
     from calculator_1 import add, sub, mul, div
 
