@@ -4,10 +4,10 @@ listint_t *reverse_listint(listint_t **head);
 int is_palindrome(listint_t **head);
 
 /**
- * reverse_listint - Reverses a singly-linked listint_t list.
- * @head: A pointer to the starting node of the list to reverse.
+ * reverse_listint - Singly-linked listint_t list is reversed.
+ * @head: Pointer to the starting node of the list to be reversed.
  *
- * Return: A pointer to the head of the reversed list.
+ * Return: Pointer to the head of the reversed list.
  */
 listint_t *reverse_listint(listint_t **head)
 {
@@ -27,10 +27,9 @@ listint_t *reverse_listint(listint_t **head)
 
 /**
  * is_palindrome - Checks if a singly linked list is a palindrome.
- * @head: A pointer to the head of the linked list.
+ * @head: Pointer to the starting node of the list to be checked.
  *
- * Return: If the linked list is not a palindrome - 0.
- *         If the linked list is a palindrome - 1.
+ * Return: 1 if the list is a palindrome, 0 otherwise
  */
 int is_palindrome(listint_t **head)
 {
