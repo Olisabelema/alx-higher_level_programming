@@ -1,4 +1,7 @@
 #!/bin/usr/python3
 def simple_delete(a_dictionary, key=""):
-    a_dictionary.pop(key, None)
+    try:
+        del a_dictionary[key]
+    except KeyError:
+        pass
     return (a_dictionary)
