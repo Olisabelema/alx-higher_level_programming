@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-def common_elements(set_1, set_2):
-    """returns a set of common elements in two sets."""
-    return (set_1 & set_2)
+def uniq_add(my_list=[]):
+    """adds all unique integers in a list (only once for each integer)."""
+    integers = filter(lambda x: isinstance(x, int), my_list)
+    return sum(set(integers))
