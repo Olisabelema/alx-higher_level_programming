@@ -1,13 +1,17 @@
 #!/usr/bin/python3
 
-def safe_print_list(my_list=[], x=0):
+def safe_print_list_integers(my_list=[], x=0):
     try:
         count = 0
-        for i in range(x):
-            print(my_list[i], end="")
-            count += 1
-    except IndexError:
-        pass
-    finally:
+        index = 0
+        while count < x:
+            if isinstance(my_list[index], int):
+                print("{:d}".format(my_list[index]), end="")
+                count += 1
+                if count == x:
+                    break
+            index += 1
         print()
         return (count)
+    except IndexError:
+        raise
