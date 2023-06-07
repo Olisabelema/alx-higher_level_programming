@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 """This module adds two integers"""
 import doctest
 
@@ -27,6 +28,7 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
 
     return a + b
+
 
 if __name__ == '__main__':
     doctest.testfile("./tests/0-add_integer.txt")
