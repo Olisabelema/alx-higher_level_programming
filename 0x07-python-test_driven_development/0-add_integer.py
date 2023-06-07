@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-
-
 """This module adds two integers"""
 import doctest
+
 
 def add_integer(a, b=98):
     """Adds a and b and returns result
