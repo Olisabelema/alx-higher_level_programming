@@ -1,17 +1,16 @@
 #!/usr/bin/node
 
 /*
-Define a Rectangle class representing a rectangle shape.
+Write a class Rectangle that defines a rectangle:
 Instance attributes: width, height;
-Constructor arguments: w (width), h (height);
+Constructor arguments/parameter: w, h;
 */
 
-class Rectangle {
-  constructor(w, h) {
-    this.width = w;
-    this.height = h;
+module.exports = class Rectangle {
+  constructor (w, h) {
+    if (w > 0 && h > 0) {
+      this.width = w;
+      this.height = h;
+    }
   }
-}
-
-module.exports = Rectangle;
-
+};
