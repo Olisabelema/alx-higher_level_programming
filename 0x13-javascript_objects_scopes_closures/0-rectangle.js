@@ -1,9 +1,7 @@
 #!/usr/bin/node
 
-class Rectangle
-{
-	constructor() {}
-}
+/*
+Empty class definition for a rectangle shape:
+*/
 
-module.exports = Rectangle;
-
+module.exports = class Rectangle {};
