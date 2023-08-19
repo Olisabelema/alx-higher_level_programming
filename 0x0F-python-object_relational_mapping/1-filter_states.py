@@ -29,7 +29,7 @@ def main():
         cursor = db.cursor()
 
         # Execute the query to retrieve filtered states
-        query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id"
+        query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
         cursor.execute(query)
 
         # Fetch all rows and display results
