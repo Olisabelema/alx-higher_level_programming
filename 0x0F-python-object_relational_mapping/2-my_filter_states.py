@@ -41,7 +41,8 @@ def main():
         # Fetch all rows and display results
         states = cursor.fetchall()
         for state in states:
-            print(state)
+            if state[1] == state_name:
+                print(state)
 
         # Close the cursor and database connection
         cursor.close()
