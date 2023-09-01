@@ -1,23 +1,18 @@
 #!/usr/bin/python3
-"Make a post request"
-import sys
-import requests
-if __name__ == '__main__':
-    """Implementing post request"""
-    q = ""
-    url = "http://0.0.0.0:5000/search_user"
+"""Script that sends a POST request with data in the variable q"""
 
-    if len(sys.argv) > 1 and sys.argv[1].isalpha() is not False:
-        q = sys.argv[1]
-    data = {"q": q}
-    response = requests.post(url, data)
+import requests
+from sys import argv
+
+if __name__ == '__main__':
+    url = "http://0.0.0.0:5000/search_user"
+    data = {"q": argv[1][0] if len(argv) > 1 else ""}
+    response = requests.post(url, data=data)
     try:
-        if (response.json() and len(response.json()) > 0):
-            result = response.json()
-            id = result.get('id')
-            name = result.get('name')
-            print(f"[{id}] {name}")
-        elif len(response.json()) == 0:
+        d = response.json()
+        if not d:
             print("No result")
+        else:
+            print("[{}] {}".format(d.get("id"), d.get("name")))
     except ValueError:
         print("Not a valid JSON")
